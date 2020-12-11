@@ -8,8 +8,8 @@ public class EX1plusGrandeElement {
 	
 	public static void main(String[] args) 
 	{
-		int []myTab= {90,67,89,45,100,90,1,2,3,1000,6};
-		System.out.println("L'element le plus grand est " + plusGrandNum(myTab));
+		int []myTab= {90,67,89,45,100,90,1,2,3,1000,6,12,2001,23};
+		System.out.println("L'element le plus grand est a la position " + plusGrandIndex(myTab));
 		
 		/* Methodes suivants pour afficher les resultats
 		if(isPresent(myTab,6))
@@ -50,18 +50,20 @@ public class EX1plusGrandeElement {
 			return min;
 		}
 		// methode pour afficher l'index du plus grand nombre
-		static int plusGrandIndex(int []Tab)
-		{
-			int pos=0; // variable pour la position du plus grand nombre
-			int max=0; // variable qui servira pour la valeur maximale
-			for (int i = 0; i < Tab.length; i++) 
-			{
-				if(Tab[i]>max)
-					max=Tab[i];
-					pos=i;
-			}
-			return pos;
-		}
+				static int plusGrandIndex(int []Tab)
+				{
+					int max=0; // variable qui servira pour la valeur maximale
+					int pos=0; // variable pour la position du plus grand nombre
+					for(int i=0;i<Tab.length;i++)
+					{
+						if(Tab[i]>max)
+						{
+							max=Tab[i];
+							pos=i;
+						}
+					}
+					return pos;
+				}
 		// methode pour afficher l'index du plus petite nombre
 		static int plusPetitIndex(int []Tab)
 		{
